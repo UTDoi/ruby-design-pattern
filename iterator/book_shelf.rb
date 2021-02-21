@@ -19,6 +19,7 @@ class BookShelf
     @last
   end
 
+  # 自身の持つ要素を順番にスキャンする役割を持つ、iteratorインスタンスを作成する
   def iterator
     BookShelfIterator.new(self)
   end
