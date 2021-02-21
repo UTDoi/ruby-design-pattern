@@ -5,11 +5,7 @@ class BookShelfIterator
   end
 
   def has_next?
-    if (@index < @book_shelf.get_length)
-      true
-    else
-      false
-    end
+    @index < @book_shelf.get_length
   end
 
   def next
