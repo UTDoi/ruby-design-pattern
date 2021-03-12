@@ -1,0 +1,14 @@
+require_relative 'random_number_generator'
+require_relative 'digit_observer'
+require_relative 'graph_observer'
+
+digit_observer = DigitObserver.new
+graph_observer = GraphObserver.new
+
+random_number_generator = RandomNumberGenarator.new
+# Subjectインターフェース(今回はNumberGenerator抽象クラスだが)のadd_observerメソッドの実装は、ConcreteObserverではなくObserverインターフェースに依存しているので、Observerインタフェースを実装したオブジェクトであれば何でも登録可能
+# 逆に、ObserverインターフェースのupdateメソッドもSubjectインターフェースに依存しているので、別のConcreteSubjectに同じobserverを登録させることも可能
+random_number_generator.add_observer(digit_observer)
+random_number_generator.add_observer(graph_observer)
+
+random_number_generator.execute
