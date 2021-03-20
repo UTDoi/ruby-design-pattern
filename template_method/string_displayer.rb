@@ -7,6 +7,8 @@ class StringDisplayer < AbstractDisplayer
     @width = str.bytesize
   end
 
+  private
+
   def _open
     _print_line
   end

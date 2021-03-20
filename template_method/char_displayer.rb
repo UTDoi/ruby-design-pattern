@@ -5,6 +5,8 @@ class CharDisplayer < AbstractDisplayer
     @char = char
   end
 
+  private
+
   def _open
     print '<<'
   end

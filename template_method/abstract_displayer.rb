@@ -9,6 +9,9 @@ class AbstractDisplayer
     _close
   end
 
+  # 具体的な処理はカプセル化
+  private
+
   # 具体的な処理はsub classに任せる
   def _open
     raise NotImplementedError
