@@ -13,6 +13,7 @@ class AbstractDisplayer
   private
 
   # 具体的な処理はsub classに任せる
+  # algorithm中の変化する処理部分だけ抜き出し、sub classでoverrideして拡張できるようにすることでOCPを実現する
   def _open
     raise NotImplementedError
   end
