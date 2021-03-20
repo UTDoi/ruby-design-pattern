@@ -1,4 +1,6 @@
 # Context ConcreteStrategyインスタンスをhas-a(コンポジション)で持ち、必要に応じて処理を委譲する
+# template methodパターンがアルゴリズムの拡張に対して継承ベースで実現しているのに対し、strategyパターンでは委譲ベースで実現している
+# そのため、template methodパターンに比べ実行時のアルゴリズム切り替えが比較的容易である
 class Player
   attr_reader :name
 
